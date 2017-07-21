@@ -3,13 +3,15 @@ package com.qj;
 import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.builder.SpringApplicationBuilder;
+import org.springframework.boot.web.support.SpringBootServletInitializer;
 
 
 @SpringBootApplication
 //@EnableAutoConfiguration
 //@ComponentScan
 @MapperScan("com.qj.mybatis.mapper")
-public class SayApplication {
+public class SayApplication extends SpringBootServletInitializer{
 
 //	//DataSource配置
 //	@Bean
@@ -33,6 +35,11 @@ public class SayApplication {
 //	public PlatformTransactionManager transactionManager() {
 //		return new DataSourceTransactionManager(dataSource());
 //	}
+
+	@Override
+	protected SpringApplicationBuilder configure(SpringApplicationBuilder application) {
+		return application.sources(SayApplication.class);
+	}
 
 	public static void main(String[] args) {
 		SpringApplication.run(SayApplication.class, args);
