@@ -36,6 +36,7 @@ public class SayApplication extends SpringBootServletInitializer{
 //		return new DataSourceTransactionManager(dataSource());
 //	}
 
+	//steart with tomcat
 	@Override
 	protected SpringApplicationBuilder configure(SpringApplicationBuilder application) {
 		return application.sources(SayApplication.class);

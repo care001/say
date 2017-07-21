@@ -11,7 +11,7 @@
         </encoder>
 
         <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
-            <fileNamePattern>/Users/huangzequan/Desktop/logs/say/say-%d{yyyy-MM-dd}.%i.log</fileNamePattern>
+            <fileNamePattern>~/say-%d{yyyy-MM-dd}.%i.log</fileNamePattern>
             <timeBasedFileNamingAndTriggeringPolicy
                     class="ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP">
                 <maxFileSize>64 MB</maxFileSize>
